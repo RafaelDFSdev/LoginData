@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*header styles*/
+
+.logo{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+header a{
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+a:hover{
+    opacity: 0.7;
+}
+.logo{
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: #23232e;
+    height: 8vh;
+}
+.navList{
+    list-style: none;
+    display: flex;
+    
+}
+.navList li{
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+.mobileMenu{
+    cursor: pointer;
+    display: none;
+}
+.mobileMenu div{
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    
+}
+
+
+/* main styles */
+
+main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.formulario{
+    width: 50%;
+    margin: 6rem auto;
+    border: 1px solid darkgray;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
+.visualizar{
+    width: auto;
+    margin: 0 auto;
+}
+
+
+/* footer styles */
+
+footer{
+    display: flex;
+    height: 6vh;
+    background-color: #23232e;
+}
+
+/* responsive settings */
+
+@media (max-width:999px) {
+    body{
+        overflow-x: hidden;
+    }
+    .navList{
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 50vw;
+        height: 100%;
+        background: #23232e;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .navList li{
+        margin-left: 0;
+        opacity: 0;
+    }
+    .mobileMenu{
+        display: block;
+    }
+    .navList.active{
+        transform: translateX(0);
+    }
+
+    /*opacidade e slide dos links do menu*/
+
+    @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translate(50px);
+        }to{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+
+    .mobileMenu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+        transition: .3s;
+    }
+    .mobileMenu.active .line2{
+        opacity: 0;
+        transition: .3s;
+    }
+    .mobileMenu.active .line3{
+        transform: rotate(45deg) translate(-5px, -7px);
+        transition: .3s;
+    }
+}
