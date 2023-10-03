@@ -37,7 +37,6 @@ nav{
 .navList{
     list-style: none;
     display: flex;
-    
 }
 .navList li{
     letter-spacing: 3px;

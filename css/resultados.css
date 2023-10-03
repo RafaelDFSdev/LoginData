@@ -41,7 +41,6 @@ nav{
     display: flex;
     height: 100%;
     align-items: center;
-    margin-top: 1rem;
 }
 .navList li{
     letter-spacing: 3px;
@@ -86,6 +85,15 @@ button a{
     width: auto;
     margin: 0 auto;
 }
+
+/* footer styles */
+
+footer{
+    display: flex;
+    height: 6vh;
+    background-color: #23232e;
+}
+
 /* responsive settings */
 
 @media (max-width:999px) {
