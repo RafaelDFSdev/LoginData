@@ -65,6 +65,9 @@ main{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url(/LoginData/img/background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .tabela{
@@ -73,6 +76,7 @@ main{
     border-radius: 10px;
     margin: 6rem auto;
     padding: 2rem;
+    background-color: #fff;
 }
 button a{
     color: white;

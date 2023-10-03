@@ -62,6 +62,9 @@ main{
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-image: url(/LoginData/img/background.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .formulario{
     width: 50%;
