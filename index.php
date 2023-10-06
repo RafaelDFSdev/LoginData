@@ -12,7 +12,7 @@
       include("editar.php");
       break;
     case 'excluir':
-      include("resultados.php");
+      include("cadastro.php");
       break;
     
     default:

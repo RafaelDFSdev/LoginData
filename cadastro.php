@@ -1,7 +1,7 @@
 <?php
     include("database.php");
 
-    switch ($_POST["acao"]) {
+    switch ($_REQUEST["acao"]) {
         case 'cadastrar':
             $nome = $_POST["nome"];
             $email = $_POST["email"];
