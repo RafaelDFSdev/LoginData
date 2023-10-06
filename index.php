@@ -51,7 +51,7 @@
         </ul>
     </nav>
 </header>
-    <main>
+    <main style="">
         <div class="formulario shadow-lg p-3 bg-body-tertiary rounded">
             <form action="cadastro.php" method="post">
               <input type="hidden" name="acao" value="cadastrar">

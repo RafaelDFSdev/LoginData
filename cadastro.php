@@ -50,6 +50,6 @@
     if($res === true){
         print "<script>location.href='cadastrosucesso.php'</script>";
     }else{
-        print "<script>location.href='index.php'</script>";
+        print "<script>alert('Não foi possível cadastrar usuário.');location.href='index.php'</script>";
     }
 ?>
