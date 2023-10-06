@@ -1,28 +1,11 @@
 <?php 
-  include("database.php");
+    include("database.php");
 
-  switch (@$_REQUEST["page"]) {
-    case 'salvar':
-      include("cadastro.php");
-      break;
-    case 'listar':
-      include("resultados.php");
-      break;
-    case 'editar':
-      include("editar.php");
-      break;
-    case 'excluir':
-      include("resultados.php");
-      break;
-    
-    default:
-      
-      break;
-  }
+    $sql = "SELECT * FROM usuarios WHERE id=".$_REQUEST["id"];
 
-
+    $res = $conn->query($sql);
+    $row = $res->fetch_object();
 ?>
-
 
 
 <!DOCTYPE html>
@@ -54,14 +37,15 @@
     <main>
         <div class="formulario shadow-lg p-3 bg-body-tertiary rounded">
             <form action="cadastro.php" method="post">
-              <input type="hidden" name="acao" value="cadastrar">
+              <input type="hidden" name="acao" value="editar">
+              <input type="hidden" name="id" value="<?php print $row->id; ?>">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Nome do Usuário</label>
-                  <input type="text" class="form-control required" name="nome" id="aluno_nome" aria-describedby="emailHelp" placeholder="Seu nome" required>
+                  <input type="text" class="form-control required" name="nome" value="<?php print $row->nome; ?>" id="aluno_nome" aria-describedby="emailHelp" placeholder="Seu nome" required>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Endereço de email</label>
-                  <input type="email" class="form-control required" name="email" id="aluno_email" aria-describedby="emailHelp" placeholder="Seu email" required>
+                  <input type="email" class="form-control required" name="email" value="<?php print $row->email; ?> "id="aluno_email" aria-describedby="emailHelp" placeholder="Seu email" required>
                   <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>
                 </div>
                 <div class="form-group">
@@ -70,7 +54,7 @@
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Data de Nascimento</label>
-                  <input type="date" class="form-control required" name="data_nasc" id="aluno_data" required>
+                  <input type="date" class="form-control required" name="data_nasc" value="<?php print $row->data_nasc; ?>" id="aluno_data" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </form>
@@ -80,12 +64,3 @@
     <footer>
       
     </footer>
-
-
-
-
-
-    <script src="script/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-</body>
-</html>

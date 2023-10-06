@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,32 +28,37 @@
         </nav>
     </header>
     <main>
-        <div class="tabela">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col"></th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Email</th>
-                        <th scope="col">Senha</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <?php 
+    include("database.php");
+    $sql = " SELECT * FROM  usuarios";
+    $res = $conn->query($sql);
+    $qtd = $res->num_rows;
+
+    if($qtd > 0){
+        print "<table style='width:70vw;' class='tabela table table-hover table-bordered'>";
+            print "<th>ID</th>"; 
+            print "<th>NOME</th>"; 
+            print "<th>EMAIL</th>"; 
+            print "<th>SENHA</th>"; 
+            print "<th>DATA NASC</th>"; 
+            print "<th>Ações</th>"; 
+        while($row =$res->fetch_object() ){
+            print "<tr>";
+            print "<td>".$row->id."</td>"; 
+            print "<td>".$row->nome."</td>"; 
+            print "<td>".$row->email."</td>"; 
+            print "<td>".$row->senha."</td>"; 
+            print "<td>".$row->data_nasc."</td>"; 
+            print "<td style='text-align: center;'>
+                    <button onclick=\"location.href='editar.php?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
+                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='resgistrar.php?page=registrar&acao=excluir&id=".$row->id."'}else{false;};\" class='btn btn-danger'>Excluir</button>
+                    </td>"; 
+        }
+        print "</table>";
+    }else{
+        print"<p class='alert alert-danger'>Não encontrou resultados</p>";
+    }
+?>
         <button class="btn btn-primary visualizar"><a href="index.php">Voltar Para Cadastro</a> </button>
 
     </main>
