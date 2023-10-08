@@ -35,7 +35,7 @@
     $qtd = $res->num_rows;
 
     if($qtd > 0){
-        print "<table style='width:70vw;' class='tabela table table-hover table-bordered'>";
+        print "<table style='width:70%;' class='tabela table table-hover table-bordered'>";
             print "<th>ID</th>"; 
             print "<th>NOME</th>"; 
             print "<th>EMAIL</th>"; 
@@ -47,7 +47,7 @@
             print "<td>".$row->id."</td>"; 
             print "<td>".$row->nome."</td>"; 
             print "<td>".$row->email."</td>"; 
-            print "<td>".$row->senha."</td>"; 
+            print "<td style='max-width: 50px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden;'>".$row->senha."</td>"; 
             print "<td>".$row->data_nasc."</td>"; 
             print "<td style='text-align: center;'>
                     <button onclick=\"location.href='editar.php?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>

@@ -64,10 +64,12 @@ main{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url(/img/background.avif);
+    background-image: url("../img/background.avif");
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* table styles */
 
 .tabela{
     width: 50vw;
@@ -76,6 +78,13 @@ main{
     margin: 6rem auto;
     padding: 2rem;
     background-color: #fff;
+}
+
+.limitar-texto {
+    max-width: 50px; /* Largura máxima da célula da tabela */
+    overflow: hidden; /* Texto que excede a largura será oculto */
+    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+    text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto é cortado */
 }
 button a{
     color: white;
@@ -147,5 +156,18 @@ footer{
     .mobileMenu.active .line3{
         transform: rotate(45deg) translate(-5px, -7px);
         transition: .3s;
+    }
+
+
+    /* table styles */
+
+    .tabela{
+        height: 100vh;
+    }
+    .limitar-texto{
+        max-width: 50px; /* Largura máxima da célula da tabela */
+        overflow: hidden; /* Texto que excede a largura será oculto */
+        white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
+        text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto é cortado */
     }
 }
