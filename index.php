@@ -47,9 +47,9 @@ switch (@$_REQUEST["page"]) {
         <div class="line3"></div>
       </div>
       <ul class="navList">
-        <li><a href="">Início</a></li>
-        <li><a href="">Sobre</a></li>
-        <li><a href="">Contato</a></li>
+        <li><a href="../LoginData/index.php">Início</a></li>
+        <li><a href="../Logindata/index.php">Cadastrar</a></li>
+        <li><a href="../Logindata/resultados.php">editar/excluir users</a></li>
       </ul>
     </nav>
   </header>

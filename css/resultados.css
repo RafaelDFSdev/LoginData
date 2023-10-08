@@ -87,6 +87,11 @@ main {
     background-color: #fff;
 }
 
+td, th{
+    height: 1rem;
+}
+
+
 .limitar-texto {
     max-width: 50px;
     /* Largura máxima da célula da tabela */
@@ -182,8 +187,9 @@ footer {
 
     /* table styles */
 
-    .tabela {
-        height: 100vh;
+    .botao{
+        width: 70px;
+        margin: 2px;
     }
 
     .limitar-texto {

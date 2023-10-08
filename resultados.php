@@ -20,9 +20,9 @@
                 <div class="line3"></div>
             </div>
             <ul class="navList">
-                <li><a href="">Início</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Contato</a></li>
+                <li><a href="../LoginData/index.php">Início</a></li>
+                <li><a href="../Logindata/index.php">Cadastrar</a></li>
+                <li><a href="../Logindata/resultados.php">editar/excluir users</a></li>
             </ul>
         </nav>
     </header>
@@ -49,7 +49,7 @@
                 print "<td style='max-width: 50px; text-overflow: ellipsis; white-space: nowrap;overflow: hidden;'>" . $row->senha . "</td>";
                 print "<td>" . $row->data_nasc . "</td>";
                 print "<td style='text-align: center;'>
-                    <button onclick=\"location.href='editar.php?page=editar&id=" . $row->id . "';\" class='btn btn-success'>Editar</button>
+                    <button onclick=\"location.href='editar.php?page=editar&id=" . $row->id . "';\" class='botao btn btn-success'>Editar</button>
                     <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='cadastro.php?page=cadastro&acao=excluir&id=" . $row->id . "'}else{false;};\" class='btn btn-danger'>Excluir</button>
                     </td>";
             }
