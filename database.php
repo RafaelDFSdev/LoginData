@@ -12,6 +12,3 @@ if ($conn->connect_error) {
 }
 
 // Se a conexão for bem-sucedida, você pode prosseguir com as operações no banco de dados
-?>
-
-

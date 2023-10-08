@@ -52,4 +52,3 @@
     }else{
         print "<script>alert('Não foi possível cadastrar usuário.');location.href='index.php'</script>";
     }
-?>

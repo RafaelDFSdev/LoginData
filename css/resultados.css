@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,26 +9,29 @@
 
 
 
-.logo{
+.logo {
     text-decoration: none;
     color: white;
     font-size: 18px;
 }
 
-header a{
+header a {
     color: #fff;
     text-decoration: none;
     transition: 0.3s;
 }
-a:hover{
+
+a:hover {
     opacity: 0.7;
 }
-.logo{
+
+.logo {
     font-size: 24px;
     text-transform: uppercase;
     letter-spacing: 4px;
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -36,31 +39,35 @@ nav{
     background: #23232e;
     height: 8vh;
 }
-.navList{
+
+.navList {
     list-style: none;
     display: flex;
     height: 100%;
     align-items: center;
 }
-.navList li{
+
+.navList li {
     letter-spacing: 3px;
     margin-left: 32px;
 }
-.mobileMenu{
+
+.mobileMenu {
     cursor: pointer;
     display: none;
 }
-.mobileMenu div{
+
+.mobileMenu div {
     width: 32px;
     height: 2px;
     background: #fff;
     margin: 8px;
-    
+
 }
 
 
 /* main style */
-main{
+main {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -71,7 +78,7 @@ main{
 
 /* table styles */
 
-.tabela{
+.tabela {
     width: 50vw;
     border: 1px solid black;
     border-radius: 10px;
@@ -81,23 +88,29 @@ main{
 }
 
 .limitar-texto {
-    max-width: 50px; /* Largura máxima da célula da tabela */
-    overflow: hidden; /* Texto que excede a largura será oculto */
-    white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
-    text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto é cortado */
+    max-width: 50px;
+    /* Largura máxima da célula da tabela */
+    overflow: hidden;
+    /* Texto que excede a largura será oculto */
+    white-space: nowrap;
+    /* Impede que o texto seja quebrado em várias linhas */
+    text-overflow: ellipsis;
+    /* Adiciona reticências (...) quando o texto é cortado */
 }
-button a{
+
+button a {
     color: white;
     text-decoration: none;
 }
-.visualizar{
+
+.visualizar {
     width: auto;
     margin: 0 auto;
 }
 
 /* footer styles */
 
-footer{
+footer {
     display: flex;
     height: 6vh;
     background-color: #23232e;
@@ -106,10 +119,11 @@ footer{
 /* responsive settings */
 
 @media (max-width:999px) {
-    body{
+    body {
         overflow-x: hidden;
     }
-    .navList{
+
+    .navList {
         position: absolute;
         top: 8vh;
         right: 0;
@@ -122,38 +136,45 @@ footer{
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
     }
-    .navList li{
+
+    .navList li {
         margin-left: 0;
         opacity: 0;
     }
-    .mobileMenu{
+
+    .mobileMenu {
         display: block;
     }
-    .navList.active{
+
+    .navList.active {
         transform: translateX(0);
     }
 
     /*opacidade e slide dos links do menu*/
 
-    @keyframes navLinkFade{
-        from{
+    @keyframes navLinkFade {
+        from {
             opacity: 0;
             transform: translate(50px);
-        }to{
+        }
+
+        to {
             opacity: 1;
             transform: translate(0);
         }
     }
 
-    .mobileMenu.active .line1{
+    .mobileMenu.active .line1 {
         transform: rotate(-45deg) translate(-8px, 8px);
         transition: .3s;
     }
-    .mobileMenu.active .line2{
+
+    .mobileMenu.active .line2 {
         opacity: 0;
         transition: .3s;
     }
-    .mobileMenu.active .line3{
+
+    .mobileMenu.active .line3 {
         transform: rotate(45deg) translate(-5px, -7px);
         transition: .3s;
     }
@@ -161,13 +182,18 @@ footer{
 
     /* table styles */
 
-    .tabela{
+    .tabela {
         height: 100vh;
     }
-    .limitar-texto{
-        max-width: 50px; /* Largura máxima da célula da tabela */
-        overflow: hidden; /* Texto que excede a largura será oculto */
-        white-space: nowrap; /* Impede que o texto seja quebrado em várias linhas */
-        text-overflow: ellipsis; /* Adiciona reticências (...) quando o texto é cortado */
+
+    .limitar-texto {
+        max-width: 50px;
+        /* Largura máxima da célula da tabela */
+        overflow: hidden;
+        /* Texto que excede a largura será oculto */
+        white-space: nowrap;
+        /* Impede que o texto seja quebrado em várias linhas */
+        text-overflow: ellipsis;
+        /* Adiciona reticências (...) quando o texto é cortado */
     }
 }
