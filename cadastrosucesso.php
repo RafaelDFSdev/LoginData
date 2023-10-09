@@ -29,7 +29,7 @@
         </nav>
     </header>
     <main>
-        <div class="confirma">
+        <div class="confirma shadow-lg">
             <h1>Cadastro Realizado com sucesso!</h1>
             <div class="navegacao">
                 <a href="index.php">Novo Cadastro</a>

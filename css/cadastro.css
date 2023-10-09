@@ -20,6 +20,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    border-radius: 10px;
 }
 
 .navegacao {
@@ -29,9 +31,12 @@ main {
 }
 
 .navegacao a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 2rem;
     width: auto;
-    padding: 3px;
+    padding: 7px;
     border-radius: 10px;
     text-decoration: none;
     color: white;
